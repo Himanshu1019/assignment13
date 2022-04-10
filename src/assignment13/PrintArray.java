@@ -42,18 +42,35 @@ public class PrintArray {
 				
 			
 		}
+	public static void toprint(String[] arr)
+	{
+		
+		
+			if(arr[0].length() >arr[1].length() && arr[0].length() >arr[2].length())
+			{
+				System.out.println("biggest of three string is "+arr[0]);
+				}
+			else if(arr[1].length() >arr[0].length() && arr[1].length() >arr[2].length())
+			{
+				System.out.println("biggest of three string is "+arr[1]);	
+			}
+			else
+			{
+				System.out.println("biggest of three string is " +arr[2]);	
+			}
 	
-	
+	}
 	
 	public static void main(String[] args)
 {
 		Integer[] intarray= {5,8,4};
 		Float[] floatarray= {1.3f,1.6f,1.62f};
+		String[] stringarray= {"hima","aayushi","himanshu"};
 		
 		
 		PrintArray.toprint(intarray);
 		
-		
+		PrintArray.toprint(stringarray);
 		PrintArray.toprint(floatarray);
 		
 		
