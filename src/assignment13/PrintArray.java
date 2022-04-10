@@ -2,30 +2,15 @@ package assignment13;
 
 public class PrintArray {
 	
-	public static void toprint(Integer[] intarr)
+	public static <E> void toprint(E[] intarr)
 	{
-		for(int element : intarr)
-		{
-			System.out.println(element);
-		}System.out.println("...");
-	}
-	
-	public static void toprint(String[] strarr)
-	{
-		for(String element : strarr)
-		{
-			System.out.println(element);
-		}System.out.println(".....");
-	}
-	public static void toprint(Double[] doubarr)
-	{
-		for(Double element : doubarr)
+		for(E element : intarr)
 		{
 			System.out.println(element);
 		}System.out.println(".....");
 	}
 	
-
+	
 	public static void main(String[] args)
 {
 		Integer[] intarray= {1,2,3,4,5,6};
