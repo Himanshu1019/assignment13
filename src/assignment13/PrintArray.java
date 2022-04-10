@@ -4,62 +4,25 @@ import java.util.Scanner;
 
 public class PrintArray {
 	
-	public static void toprint(Integer[] arr)
-	{
-		
-		
-			if(arr[0] >arr[1] && arr[0] >arr[2])
-			{
-				System.out.println("biggest of three number is "+arr[0]);
-				}
-			else if(arr[1] >arr[0] && arr[1] >arr[2])
-			{
-				System.out.println("biggest of three number is "+arr[1]);	
-			}
-			else
-			{
-				System.out.println("biggest of three number is "+arr[2]);	
-			}
-				
-			
-		}
-	public static void toprint(Float[] arr)
-	{
-		
-		
-			if(arr[0] >arr[1] && arr[0] >arr[2])
-			{
-				System.out.println("biggest of three number is "+arr[0]);
-				}
-			else if(arr[1] >arr[0] && arr[1] >arr[2])
-			{
-				System.out.println("biggest of three number is "+arr[1]);	
-			}
-			else
-			{
-				System.out.println("biggest of three number is "+arr[2]);	
-			}
-				
-			
-		}
-	public static void toprint(String[] arr)
-	{
-		
-		
-			if(arr[0].length() >arr[1].length() && arr[0].length() >arr[2].length())
-			{
-				System.out.println("biggest of three string is "+arr[0]);
-				}
-			else if(arr[1].length() >arr[0].length() && arr[1].length() >arr[2].length())
-			{
-				System.out.println("biggest of three string is "+arr[1]);	
-			}
-			else
-			{
-				System.out.println("biggest of three string is " +arr[2]);	
-			}
 	
-	}
+	    
+		public static <T extends Comparable<T>> void max(T... elements) {
+		    T max = elements[0];
+		    for (T element : elements)
+		    {
+		        if (element.compareTo(max) > 0) 
+		        {
+		            max = element;
+		        }
+		        
+		    }System.out.println("the maximum is "+max);
+		   
+		}
+		
+	
+	
+	
+	
 	
 	public static void main(String[] args)
 {
@@ -68,10 +31,10 @@ public class PrintArray {
 		String[] stringarray= {"hima","aayushi","himanshu"};
 		
 		
-		PrintArray.toprint(intarray);
+		PrintArray.max(intarray);
 		
-		PrintArray.toprint(stringarray);
-		PrintArray.toprint(floatarray);
+		PrintArray.max(stringarray);
+		PrintArray.max(floatarray);
 		
 		
 
